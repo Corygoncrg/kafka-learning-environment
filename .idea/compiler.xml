@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/service-email/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/service-fraud-detector/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/common-kafka/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/service-new-order/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/service-log/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/service-users/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/service-http-ecommerce/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service-log" />
+        <module name="service-http-ecommerce" />
+        <module name="common-kafka" />
+        <module name="service-new-order" />
+        <module name="service-fraud-detector" />
+        <module name="service-email" />
+        <module name="service-users" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
