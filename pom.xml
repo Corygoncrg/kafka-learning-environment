@@ -13,6 +13,7 @@
     <module>service-log</module>
     <module>service-users</module>
       <module>service-http-ecommerce</module>
+      <module>service-reading-report</module>
   </modules>
   <dependencies>
     <dependency>

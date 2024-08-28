@@ -10,6 +10,7 @@
       <directory url="file://$PROJECT_DIR$/service-log/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/service-users/src/main/resources/archetype-resources" includeSubdirectories="true" />
       <directory url="file://$PROJECT_DIR$/service-http-ecommerce/src/main/resources/archetype-resources" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/service-reading-report/src/main/resources/archetype-resources" includeSubdirectories="true" />
     </excludeFromCompile>
     <annotationProcessing>
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -20,6 +21,7 @@
         <module name="service-http-ecommerce" />
         <module name="common-kafka" />
         <module name="service-new-order" />
+        <module name="service-reading-report" />
         <module name="service-fraud-detector" />
         <module name="service-email" />
         <module name="service-users" />

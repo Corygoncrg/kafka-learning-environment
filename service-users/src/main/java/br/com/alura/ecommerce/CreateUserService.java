@@ -7,6 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Map;
 import java.util.UUID;
+import java.util.concurrent.ExecutionException;
 
 public class CreateUserService {
 
@@ -27,18 +28,18 @@ public class CreateUserService {
         }
     }
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, ExecutionException, InterruptedException {
         var userService = new CreateUserService();
         try (var service = new KafkaService<>(CreateUserService.class.getSimpleName(),
-                "ECOMMERCE_NEW_ORDER", userService::parse, Order.class, Map.of())){
+                "ECOMMERCE_NEW_ORDER", userService::parse, Map.of())){
             service.run();
         }
     }
-    private void parse(ConsumerRecord<String, Order> record) throws Exception{
+    private void parse(ConsumerRecord<String, Message<Order>> record) throws Exception{
         System.out.println("---------------------------");
         System.out.println("Processing new order, checking for user");
         System.out.println(record.value());
-        var order = record.value();
+        var order = record.value().getPayload();
         if (isNewUser(order.getEmail())){
             insertNewUser(order.getUserId(), order.getEmail());
         }
