@@ -1,5 +1,7 @@
 package br.com.alura.ecommerce;
 
+import br.com.alura.ecommerce.consumer.KafkaService;
+import br.com.alura.ecommerce.dispatcher.KafkaDispatcher;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 import java.sql.Connection;
@@ -36,7 +38,7 @@ public class BatchSendMessageService {
         }
     }
 
-    private final  KafkaDispatcher<User> userDispatcher = new KafkaDispatcher<>();
+    private final KafkaDispatcher<User> userDispatcher = new KafkaDispatcher<>();
 
     private void parse(ConsumerRecord<String, Message<String>> record) throws Exception{
         System.out.println("---------------------------");

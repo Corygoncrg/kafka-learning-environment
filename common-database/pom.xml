@@ -6,23 +6,14 @@
         <artifactId>ecommerce</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>service-users</artifactId>
-    <name>Archetype - service-users</name>
+    <artifactId>common-database</artifactId>
+    <name>Archetype - common-database</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
-            <groupId>br.com.alura</groupId>
-            <artifactId>common-kafka</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.46.1.0</version>
         </dependency>
-        <dependency>
-            <groupId>br.com.alura</groupId>
-            <artifactId>common-database</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-
-
     </dependencies>
 </project>

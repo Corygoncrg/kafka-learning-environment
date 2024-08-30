@@ -1,18 +1,18 @@
 package br.com.alura.ecommerce;
 
+import br.com.alura.ecommerce.dispatcher.KafkaDispatcher;
 import jakarta.servlet.Servlet;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
 
 import java.io.IOException;
 import java.util.concurrent.ExecutionException;
 
 public class GenerateAllReportsServlet extends HttpServlet implements Servlet {
 
-    private final  KafkaDispatcher<String> userDispatcher = new KafkaDispatcher<>();
+    private final KafkaDispatcher<String> userDispatcher = new KafkaDispatcher<>();
 
     @Override
     public void destroy() {
